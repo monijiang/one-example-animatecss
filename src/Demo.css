@@ -42,8 +42,10 @@
     color: #fff;
   }
   .coin-box.data-coin{
-    background:linear-gradient(180deg,rgba(95,200,255,1) 0%,rgba(49,151,255,1) 100%);
+    /* background:linear-gradient(180deg,rgba(95,200,255,1) 0%,rgba(49,151,255,1) 100%); */
+    background:rgba(95,200,255,1) 0%;
   }
   .coin-box.chain-coin{
-    background:linear-gradient(180deg,rgba(251,210,73,1) 0%,rgba(245,166,35,1) 100%);
+    /* background:linear-gradient(180deg,rgba(251,210,73,1) 0%,rgba(245,166,35,1) 100%); */
+    background:rgba(251,210,73,1) 0%;
   }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Card } from 'antd';
+import { BarChartOutlined, RedditOutlined } from '@ant-design/icons';
 import animate from 'animate.css';
 import './Demo.css';
 import 'antd/dist/antd.css';
@@ -8,14 +9,12 @@ const Demo = (props) => {
   const [coinArray, setCoinArray] = useState(['dataGroup','chainGroup']);
   const [coinList, setCoinList] = useState({
     dataGroup:{
-      symbol:'UDCNY',
-      name:'数积分',
-      mark:'¥',
+      name:'积分',
+      mark:<BarChartOutlined />,
     },
     chainGroup:{
-      symbol:'UDT',
-      name:'链积分',
-      mark:'Ð'
+      name:'玩具',
+      mark:<RedditOutlined />
     },
   });
 
@@ -45,12 +44,16 @@ const Demo = (props) => {
       <div className="switch-item">
         <div id={`${location === 'left' ? 'dataBox' : 'chainBox'}`}>
           <div>
-            <div className={`coin-box ${data.name === '数积分' ? 'data-coin' : 'chain-coin'} `}>{data.mark}</div>
-            <h5>{data.name}({data.symbol})</h5>
-            {data.name === '数积分' ? (
-              <p>可用余额：111</p>
+            <div className={`coin-box ${data.name === '积分' ? 'data-coin' : 'chain-coin'} `}>
+              {data.mark}
+            </div>
+            <h5>
+              {data.name}
+            </h5>
+            {data.name === '积分' ? (
+              <p>可用积分：111000</p>
             ) : (
-              <p>可用资产：10000</p>
+              <p>可用玩具：10</p>
             )}
   
           </div>
